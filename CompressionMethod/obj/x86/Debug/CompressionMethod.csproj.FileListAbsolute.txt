@@ -1,0 +1,10 @@
+D:\CompressionMethod\CompressionMethod\bin\Debug\CompressionMethod.exe
+D:\CompressionMethod\CompressionMethod\bin\Debug\CompressionMethod.pdb
+D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.csprojResolveAssemblyReference.cache
+D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.Properties.Resources.resources
+D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.csproj.GenerateResource.Cache
+D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.exe
+D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.pdb
+D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.AboutBox.resources
+D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.MainForm.resources
+D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.CodeTable.resources
