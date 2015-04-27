@@ -33,20 +33,22 @@
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.richTB = new System.Windows.Forms.RichTextBox();
+            this.codeingMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.codeTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.очиститьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.saveMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker_coder = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker_decoder = new System.ComponentModel.BackgroundWorker();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
@@ -54,9 +56,9 @@
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.progressBar,
             this.statusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 290);
+            this.statusStrip.Location = new System.Drawing.Point(0, 26);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(487, 22);
+            this.statusStrip.Size = new System.Drawing.Size(362, 22);
             this.statusStrip.TabIndex = 0;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -75,75 +77,91 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.оПрограммеToolStripMenuItem,
-            this.оПрограммеToolStripMenuItem1});
+            this.codeingMenu,
+            this.toolStripMenuItem2,
+            this.aboutMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(487, 24);
+            this.menuStrip.Size = new System.Drawing.Size(362, 24);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip1";
             // 
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
             this.открытьToolStripMenuItem,
-            this.saveMenu,
             this.toolStripSeparator1,
             this.выходToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
+            this.файлToolStripMenuItem.Click += new System.EventHandler(this.файлToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
+            this.toolStripMenuItem1.Text = "Открыть файл";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.открытьToolStripMenuItem.Text = "Открыть";
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.открытьToolStripMenuItem.Text = "Открыть бинарник";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.OpenFileToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(175, 6);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
-            // оПрограммеToolStripMenuItem
+            // codeingMenu
             // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
-            this.оПрограммеToolStripMenuItem.Text = "Кодировать";
+            this.codeingMenu.Name = "codeingMenu";
+            this.codeingMenu.Size = new System.Drawing.Size(83, 20);
+            this.codeingMenu.Text = "Кодировать";
+            this.codeingMenu.Click += new System.EventHandler(this.codeingMenu_Click);
             // 
-            // оПрограммеToolStripMenuItem1
+            // toolStripMenuItem2
             // 
-            this.оПрограммеToolStripMenuItem1.Name = "оПрограммеToolStripMenuItem1";
-            this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(94, 20);
-            this.оПрограммеToolStripMenuItem1.Text = "О программе";
-            this.оПрограммеToolStripMenuItem1.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem1_Click);
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.codeTableToolStripMenuItem,
+            this.очиститьToolStripMenuItem});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(79, 20);
+            this.toolStripMenuItem2.Text = "Настройки";
             // 
-            // panel1
+            // codeTableToolStripMenuItem
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.richTB);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(487, 266);
-            this.panel1.TabIndex = 2;
+            this.codeTableToolStripMenuItem.Checked = true;
+            this.codeTableToolStripMenuItem.CheckOnClick = true;
+            this.codeTableToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.codeTableToolStripMenuItem.Name = "codeTableToolStripMenuItem";
+            this.codeTableToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.codeTableToolStripMenuItem.Text = "Таблица кодов";
             // 
-            // richTB
+            // очиститьToolStripMenuItem
             // 
-            this.richTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTB.Location = new System.Drawing.Point(0, 0);
-            this.richTB.Name = "richTB";
-            this.richTB.Size = new System.Drawing.Size(485, 264);
-            this.richTB.TabIndex = 0;
-            this.richTB.Text = "";
+            this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
+            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.очиститьToolStripMenuItem.Text = "Очистить";
+            this.очиститьToolStripMenuItem.Click += new System.EventHandler(this.очиститьToolStripMenuItem_Click);
+            // 
+            // aboutMenuItem
+            // 
+            this.aboutMenuItem.Name = "aboutMenuItem";
+            this.aboutMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.aboutMenuItem.Text = "О программе";
+            this.aboutMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem1_Click);
             // 
             // backgroundWorker
             // 
@@ -152,26 +170,28 @@
             this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_ProgressChanged);
             this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             // 
-            // openFileDialog
+            // backgroundWorker_coder
             // 
-            this.openFileDialog.Filter = "Text file|*.txt|Compression files|*.bin";
-            this.openFileDialog.InitialDirectory = "D:\\CompressionMethod\\CompressionMethod";
+            this.backgroundWorker_coder.WorkerReportsProgress = true;
+            this.backgroundWorker_coder.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_coder_DoWork);
+            this.backgroundWorker_coder.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_coder_ProgressChanged);
+            this.backgroundWorker_coder.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_coder_RunWorkerCompleted);
             // 
-            // saveMenu
+            // backgroundWorker_decoder
             // 
-            this.saveMenu.Name = "saveMenu";
-            this.saveMenu.Size = new System.Drawing.Size(152, 22);
-            this.saveMenu.Text = "Сохранить";
+            this.backgroundWorker_decoder.WorkerReportsProgress = true;
+            this.backgroundWorker_decoder.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_decoder_DoWork);
+            this.backgroundWorker_decoder.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_decoder_ProgressChanged);
+            this.backgroundWorker_decoder.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_decoder_RunWorkerCompleted);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 312);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(362, 48);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "MainForm";
@@ -181,7 +201,6 @@
             this.statusStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,16 +214,19 @@
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem codeingMenu;
         private System.Windows.Forms.ToolStripProgressBar progressBar;
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
-        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RichTextBox richTB;
+        private System.Windows.Forms.ToolStripMenuItem aboutMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
-        private System.Windows.Forms.ToolStripMenuItem saveMenu;
+        private System.ComponentModel.BackgroundWorker backgroundWorker_coder;
+        private System.ComponentModel.BackgroundWorker backgroundWorker_decoder;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem codeTableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem очиститьToolStripMenuItem;
     }
 }
 

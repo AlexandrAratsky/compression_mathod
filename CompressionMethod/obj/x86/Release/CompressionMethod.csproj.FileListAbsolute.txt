@@ -1,0 +1,9 @@
+D:\CompressionMethod\CompressionMethod\bin\Release\CompressionMethod.exe
+D:\CompressionMethod\CompressionMethod\bin\Release\CompressionMethod.pdb
+D:\CompressionMethod\CompressionMethod\obj\x86\Release\CompressionMethod.AboutBox.resources
+D:\CompressionMethod\CompressionMethod\obj\x86\Release\CompressionMethod.CodeTable.resources
+D:\CompressionMethod\CompressionMethod\obj\x86\Release\CompressionMethod.MainForm.resources
+D:\CompressionMethod\CompressionMethod\obj\x86\Release\CompressionMethod.Properties.Resources.resources
+D:\CompressionMethod\CompressionMethod\obj\x86\Release\CompressionMethod.csproj.GenerateResource.Cache
+D:\CompressionMethod\CompressionMethod\obj\x86\Release\CompressionMethod.exe
+D:\CompressionMethod\CompressionMethod\obj\x86\Release\CompressionMethod.pdb

@@ -58,7 +58,6 @@
     <Compile Include="CodeTable.Designer.cs">
       <DependentUpon>CodeTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="HuffmanTree.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

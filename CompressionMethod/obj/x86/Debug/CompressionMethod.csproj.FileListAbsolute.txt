@@ -6,5 +6,5 @@ D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.csproj.Ge
 D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.exe
 D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.pdb
 D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.AboutBox.resources
-D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.MainForm.resources
 D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.CodeTable.resources
+D:\CompressionMethod\CompressionMethod\obj\x86\Debug\CompressionMethod.MainForm.resources

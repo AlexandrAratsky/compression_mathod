@@ -11,9 +11,9 @@ namespace CompressionMethod
 {
     public partial class CodeTable : Form
     {
-        private Dictionary<char, string> table;
+        private Dictionary<byte, string> table;
 
-        public CodeTable(Dictionary<char, string> t)
+        public CodeTable(Dictionary<byte, string> t)
         {
             InitializeComponent();
             table = t;
@@ -23,7 +23,7 @@ namespace CompressionMethod
         {
             foreach (var node in table)
             {
-                dataGridView.Rows.Add("'"+node.Key.ToString()+"' #"+((int)node.Key).ToString(), node.Value);
+                dataGridView.Rows.Add("#"+(node.Key).ToString(), node.Value);
             }
         }
     }
